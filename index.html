@@ -224,16 +224,54 @@
   padding: 20px;
   text-align: center;
 }
+.logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 50%;
+  padding: 8px;
+}
+.dark-footer {
+  background:#0a1f3c;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+.social-icons {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:26px;
+  margin-bottom:20px;
+}
+
+.footer-links {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-links a {
+  color:#ccc;
+  text-decoration:none;
+}
+
+.footer-links a:hover {
+  color:white;
+}
   </style>
 </head>
 
 <body>
 
-<div class="header">
-  <h1>Physio Supriyo</h1>
+<img src="logo.png" class="logo">
+<h1>Physio Supriyo</h1>
   <p>Best Physiotherapist in Newtown & Rajarhat, Kolkata</p>
   <p style="font-weight:500;">
-    DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab Professional Rehabilitation Council of India
+    DPT | Senior Physiotherapist | 14+ Year | N.C.V.T in Physio (Govt of India) | Regd. Rehab Professional Rehabilitation Council of India
   </p>
   <p>Trusted by 500+ patients</p>
 
@@ -413,22 +451,25 @@
   src="https://maps.google.com/maps?q=Newtown%20Kolkata&output=embed">
   </iframe>
 </div>
+<div class="dark-footer">
 
-<div class="section light" style="text-align:center;">
-  <h2>Contact</h2>
+  <h2>Connect With Us</h2>
 
-  <p>📞 +91 9038296618 / 70035 54575</p>
-  <p>📍 Newtown & Rajarhat, Kolkata</p>
+  <div class="social-icons">
+    <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">🔵</a>
+    <a href="#" target="_blank">🔴</a>
+    <a href="https://wa.me/919038296618" target="_blank">🟢</a>
+  </div>
 
-  <a href="https://wa.me/919038296618">
-    <button class="btn btn-green">WhatsApp Now</button>
-  </a>
+  <h3>Useful Links</h3>
 
-  <br><br>
+  <div class="footer-links">
+    <a href="#">Our Workshops</a>
+    <a href="#">Our Activities</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Privacy Policy</a>
+  </div>
 
-  <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">
-    <button class="btn btn-blue">Watch on Facebook</button>
-  </a>
 </div>
 
 <div class="footer">
