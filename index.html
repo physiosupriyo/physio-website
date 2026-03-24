@@ -224,14 +224,56 @@
   padding: 20px;
   text-align: center;
 }
+.header-flex {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+}
+
+.logo {
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+.dark-footer {
+  background:#0a1f3c;
+  color:white;
+  text-align:center;
+  padding:30px 20px;
+}
+
+.social-icons {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  font-size:26px;
+  margin-bottom:20px;
+}
+
+.footer-links {
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.footer-links a {
+  color:#ccc;
+  text-decoration:none;
+}
+
+.footer-links a:hover {
+  color:white;
+}
   </style>
 </head>
 
 <body>
 
-<div class="header">
+<div class="header-flex">
+  <img src="logo.png" class="logo">
   <h1>Physio Supriyo</h1>
-  <p>Best Physiotherapist in Newtown & Rajarhat, Kolkata</p>
+</div>  <p>Best Physiotherapist in Newtown & Rajarhat, Kolkata</p>
   <p style="font-weight:500;">
     DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab Professional Rehabilitation Council of India
   </p>
@@ -414,12 +456,6 @@
   </iframe>
 </div>
 
-<div class="section light" style="text-align:center;">
-  <h2>Contact</h2>
-
-  <p>📞 +91 9038296618 / 70035 54575</p>
-  <p>📍 Newtown & Rajarhat, Kolkata</p>
-
   <a href="https://wa.me/919038296618">
     <button class="btn btn-green">WhatsApp Now</button>
   </a>
@@ -427,10 +463,36 @@
   <br><br>
 
   <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">
-    <button class="btn btn-blue">Watch on Facebook</button>
+    <button class="btn btn-blue">Facebook</button>
   </a>
 </div>
 
+<div class="dark-footer">
+
+  <h2>Connect With Us</h2>
+
+  <div class="social-icons">
+    <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">📘</a>
+    <a href="https://www.youtube.com/@physiosupriyo9539" target="_blank">📸</a>
+    <a href="https://wa.me/919038296618" target="_blank">💬</a>
+    
+  </div>
+
+  <h3>Useful Links</h3>
+
+  <div class="footer-links">
+    <a href="#">About</a>
+    <a href="#">Professional Background ackground</a>
+    <a href="#">Why Choose Us</a>
+    <a href="#">Patient Review</a>
+    <a href="#">Our Work & Treatments </a>
+    <a href="#">Our Activities</a>
+    <a href="#">Our Location</a>
+    <a href="#">Terms & Conditions</a>
+    <a href="#">Privacy Policy</a>
+  </div>
+
+</div>
 <div class="footer">
   © 2026 Physio Supriyo
 </div>
@@ -492,4 +554,4 @@ function smoothScroll() {
 smoothScroll();
 </script>
 </body>
-    </html>
+</html>
