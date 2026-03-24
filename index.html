@@ -77,12 +77,14 @@
       transform:translateY(-6px);
     }
 
+    /* 🔥 FIXED FONT */
     input, textarea {
       width:100%;
       padding:12px;
       margin:8px 0;
       border-radius:8px;
       border:1px solid #ccc;
+      font-family:'Poppins',sans-serif;
     }
 
     iframe {
@@ -111,6 +113,16 @@
       scroll-snap-align:start;
       flex-shrink:0;
       transition:0.3s;
+      box-shadow:0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .scroll-gallery video {
+      height:200px;
+      width:150px;
+      object-fit:cover;
+      border-radius:15px;
+      flex-shrink:0;
+      scroll-snap-align:start;
       box-shadow:0 4px 12px rgba(0,0,0,0.15);
     }
 
@@ -165,12 +177,12 @@
 <div class="header">
   <h1>Physio Supriyo</h1>
   <p>Best Physiotherapist in Newtown & Rajarhat, Kolkata</p>
-  <p style="font-weight:500;">DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab Professional Rehabilitation Council of India
- </p>
+  <p style="font-weight:500;">
+    DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab Professional Rehabilitation Council of India
+  </p>
   <p>Trusted by 500+ patients</p>
 
   <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-top:15px;">
-
     <a href="https://wa.me/919038296618">
       <button class="btn btn-white">Book Consultation</button>
     </a>
@@ -182,7 +194,6 @@
     <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">
       <button class="btn btn-blue">Facebook Video</button>
     </a>
-
   </div>
 </div>
 
@@ -190,31 +201,35 @@
   <img src="supriyo.jpg">
 </div>
 
-<!-- 🔥 COUNTER SECTION -->
+<!-- 🔥 COUNTERS -->
 <div class="section light">
+
   <div class="counter-wrapper">
     <div class="counter-box">
       <h2 class="counter" data-target="2000">0</h2>
       <p>Happy Patients</p>
     </div>
+
     <div class="counter-box">
       <h2 class="stars">★★★★★</h2>
       <p>5 Star Patient Rating</p>
     </div>
-  <!-- BOTTOM CENTER -->
+  </div>
+
   <div style="display:flex; justify-content:center; margin-top:20px;">
     <div class="counter-box" style="width:60%;">
       <h2 class="counter" data-target="500">0</h2>
       <p>Patient Reviews</p>
     </div>
   </div>
+
 </div>
 
 <div class="section">
   <h2>About</h2>
   <div class="card">
     Hi! I'm Supriyo Chatterjee, a professional consultant physiotherapist.
-    I lead a team of experienced and renowned physiotherapists dedicated to providing high-quality treatment for pain relief, rehabilitation, and mobility improvement.
+    I lead a team of experienced and renowned physiotherapists dedicated to providing high-quality treatment.
   </div>
 </div>
 
@@ -222,7 +237,7 @@
   <h2>Professional Background</h2>
   <div class="card">✔ Physiotherapist & Trainer</div>
   <div class="card">✔ Sports Physiotherapy Support</div>
-  <div class="card">✔ Spinal Manipulation Program (MTFI, Mangalore)</div>
+  <div class="card">✔ Spinal Manipulation Program</div>
   <div class="card">✔ Dry Needling & Myofascial Release</div>
 </div>
 
@@ -232,13 +247,6 @@
   <div class="card">✔ Manual Therapy</div>
   <div class="card">✔ Exercise Rehabilitation</div>
   <div class="card">✔ Posture Correction</div>
-  <div class="card">✔ Modern Electrotherapy and Manual Therapy</div>
-<div class="section">
-  <h2>Special Care For</h2>
-  <div class="card">✔ CVA Patient</div>
-  <div class="card">✔ Parkinson's Disorder</div>
-  <div class="card">✔ Arthritis</div>
-  <div class="card">✔ Frozen Shoulder</div>
 </div>
 
 <div class="section light">
@@ -253,53 +261,17 @@
     <img src="img7.jpg">
   </div>
 </div>
-  
-<!-- NEW VIDEO SCROLL SECTION -->
+
 <div class="section light">
   <h2>Our Activities</h2>
-
   <div class="scroll-gallery">
-
     <video src="video1.mp4" controls></video>
     <video src="video2.mp4" controls></video>
     <video src="video3.mp4" controls></video>
     <video src="video4.mp4" controls></video>
     <video src="video5.mp4" controls></video>
     <video src="video6.mp4" controls></video>
-    
   </div>
-</div>
-  
-<div class="section">
-  <h2>Watch Our Videos</h2>
-
-  <div class="video-container">
-    <iframe width="300" height="500"
-    src="https://www.youtube.com/embed/0LqwK8mSkCs">
-    </iframe>
-  </div>
-
-  <div style="text-align:center; margin-top:15px;">
-    <a href="https://www.youtube.com/@physiosupriyo9539" target="_blank">
-      <button class="btn btn-red">Visit YouTube Channel</button>
-    </a>
-  </div>
-</div>
-
-<div class="video-container">
-  <iframe width="300" height="500"
-  src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/facebook/videos/1548575853128976/&show_text=false"
-  style="border:none;overflow:hidden"
-  scrolling="no"
-  frameborder="0"
-  allowfullscreen="true">
-  </iframe>
-</div>
-
-<div style="text-align:center; margin-top:15px;">
-  <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">
-    <button class="btn btn-blue">Visit Facebook Page</button>
-  </a>
 </div>
 
 <div class="section light">
@@ -314,64 +286,42 @@
   </form>
 </div>
 
-<div class="section">
-  <h2>Our Location</h2>
-
-  <iframe width="100%" height="250"
-  src="https://maps.google.com/maps?q=Newtown%20Kolkata&output=embed">
-  </iframe>
-</div>
-
-<div class="section light" style="text-align:center;">
-  <h2>Contact</h2>
-
-  <p>📞 +91 9038296618 / 7980129804</p>
-  <p>📍 Newtown & Rajarhat, Kolkata</p>
-
-  <a href="https://wa.me/919038296618">
-    <button class="btn btn-green">WhatsApp Now</button>
-  </a>
-
-  <br><br>
-
-  <a href="https://www.facebook.com/reel/1548575853128976/" target="_blank">
-    <button class="btn btn-blue">Watch on Facebook</button>
-  </a>
-</div>
-
 <div class="footer">
-  © 2026 Physio Supriyo | All Rights Reserved
+  © 2026 Physio Supriyo
 </div>
 
 <script>
-const counter = document.querySelector('.counter');
+const counters = document.querySelectorAll('.counter');
 
-const update = () => {
-  const target = +counter.getAttribute('data-target');
-  let count = 0;
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    let count = 0;
 
-  const run = () => {
-    const increment = target / 100;
-    if (count < target) {
-      count += increment;
-      counter.innerText = Math.ceil(count);
-      setTimeout(run, 20);
-    } else {
-      counter.innerText = target + "+";
-    }
+    const run = () => {
+      const increment = target / 100;
+
+      if (count < target) {
+        count += increment;
+        counter.innerText = Math.ceil(count);
+        setTimeout(run, 20);
+      } else {
+        counter.innerText = target + "+";
+      }
+    };
+
+    run();
   };
 
-  run();
-};
+  const observer = new IntersectionObserver(entries => {
+    if(entries[0].isIntersecting){
+      update();
+      observer.disconnect();
+    }
+  });
 
-const observer = new IntersectionObserver(entries => {
-  if(entries[0].isIntersecting){
-    update();
-    observer.disconnect();
-  }
+  observer.observe(counter);
 });
-
-observer.observe(counter);
 </script>
 
 </body>
