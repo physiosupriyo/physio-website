@@ -77,7 +77,6 @@
       transform:translateY(-6px);
     }
 
-    /* 🔥 FIXED FONT */
     input, textarea {
       width:100%;
       padding:12px;
@@ -141,21 +140,41 @@
       padding:15px;
     }
 
-    /* 🔥 COUNTER STYLE */
+    /* 🔥 FIXED + PREMIUM COUNTER */
     .counter-wrapper {
       display:flex;
-      justify-content:space-around;
-      align-items:center;
+      justify-content:center;
+      align-items:stretch;
       gap:20px;
+      flex-wrap:wrap;
     }
 
     .counter-box {
       background:white;
-      padding:20px;
-      border-radius:15px;
-      width:45%;
+      padding:25px 20px;
+      border-radius:18px;
+      flex:1 1 45%;
+      max-width:300px;
       text-align:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      box-shadow:0 6px 18px rgba(0,0,0,0.1);
+      transition:all 0.3s ease;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .counter-box:hover {
+      transform:translateY(-8px) scale(1.03);
+      box-shadow:0 10px 25px rgba(10,102,194,0.25);
+    }
+
+    .counter-box::before {
+      content:'';
+      position:absolute;
+      top:0;
+      left:0;
+      width:100%;
+      height:5px;
+      background:linear-gradient(90deg,#0a66c2,#00c6ff);
     }
 
     .counter {
@@ -168,6 +187,20 @@
       font-size:32px;
       color:#FFD700;
       letter-spacing:3px;
+      animation:starPop 1.2s ease forwards;
+    }
+
+    @keyframes starPop {
+      0% { transform:scale(0.5); opacity:0; }
+      60% { transform:scale(1.2); }
+      100% { transform:scale(1); opacity:1; }
+    }
+
+    @media (max-width: 480px) {
+      .counter-box {
+        flex:1 1 100%;
+        max-width:100%;
+      }
     }
   </style>
 </head>
@@ -382,4 +415,4 @@ counters.forEach(counter => {
 </script>
 
 </body>
-  </html>
+    </html>
