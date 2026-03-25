@@ -39,20 +39,22 @@
     .btn-red { background:#FF0000; color:white; }
     .btn-blue { background:#1877F2; color:white; }
 
-    .profile {
-      text-align:center;
-      margin-top:-60px;
-    }
+    .profile{
+  display:flex;
+  justify-content:center;
+  margin-top:-75px;
+}
 
-    .profile img {
-      width:150px;
-      height:150px;
-      border-radius:50%;
-      object-fit:cover;
-      border:6px solid white;
-      box-shadow:0 10px 30px rgba(0,0,0,0.3);
-    }
+.profile img{
+  width:160px;
+  height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:7px solid white;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
 
+      object-fit:co
     .section {
       padding:30px 20px;
     }
@@ -226,8 +228,13 @@
 .corner-logo{
   position:absolute;
   top:15px;
-  left:20px;
-  width:50px;
+  left:15px;
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  object-fit:cover;
+  background:white;
+  padding:4px;
 }
 
 .review-slide {
@@ -509,4 +516,4 @@ function smoothScroll() {
 smoothScroll();
 </script>
 </body>
-      </html>
+                      </html>
