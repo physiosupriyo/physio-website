@@ -59,12 +59,12 @@ color:#333;
 
     .contact-card{
 background:#eaf2fb;
-padding:25px;
+padding:60px 20px;
 border-radius:20px;
 box-shadow:0 10px 25px rgba(0,0,0,0.15);
 max-width:380px;
 margin:auto;
-      color:#222;
+color:#333;
 text-align:left;
 }
 
@@ -76,15 +76,15 @@ line-height:1.6;
 
 .contact-info p{
   color:#333
-margin:10px 0;
-font-size:16px;
+margin:8px 0;
+font-size:18px;
 }
     .availability-box{
 background:#eaf2fb;
-padding:20px;
+padding:60px 20px;
 border-radius:12px;
 margin-top:20px;
-color:#222;   /* important */
+color:#333;   /* important */
 text-align:center;
     }
     
@@ -655,20 +655,21 @@ Real sessions, real recovery journeys
 
 <h2>Contact</h2>
 
-<div class="contact-card">
 
-<div class="contact-info">
-<p><b>📍 Location</b><br>Newtown & Rajarhat, Kolkata</p>
+<p>📍 Newtown & Rajarhat, Kolkata</p>
 
-<p><b>📞 Phone</b><br>+91 90382 96618</p>
+<p>📞 +91 90382 96618</p>
+ <p>📧 https://formsubmit.co/supriyochatterjee77@gmail.com</p>
 
 </div>
 
-  <div class="section light" id="Availability">
+  <div class="section light" id="availability">
+    <h2>Availability</h2>
+<p>⏰ <strong>Consultation Hours</strong><p>
+<p> id="status"></p>
+<p>Mon – Sat : 9:00 AM – 8:00 PM<p>
+<p>Sunday : Emergency Only</p>
     
-<p><b>⏰ Availability</b><br>
-Mon – Sat : 9:00 AM – 8:00 PM<br>
-Sunday : Emergency Only
 </p>
 </div>
   
@@ -761,5 +762,25 @@ requestAnimationFrame(autoSlide);
 autoSlide();
 
 </script>
+
+    <script>
+function checkAvailability() {
+  const now = new Date();
+  const day = now.getDay(); 
+  const hour = now.getHours();
+  const minute = now.getMinutes();
+  const time = hour + minute / 60;
+
+  const status = document.getElementById("status");
+
+  if (day >= 1 && day <= 6 && time >= 9 && time < 20) {
+    status.innerHTML = "🟢 Open Now";
+  } else {
+    status.innerHTML = "🔴 Closed Now";
+  }
+}
+
+checkAvailability();
+    </script>
 </body>
                                                       </html>
