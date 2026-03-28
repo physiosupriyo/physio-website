@@ -12,7 +12,7 @@
     body {
       margin:0;
 font-family:'Montserrat',sans-serif;
-      background:#eaf2fb;
+      background:#f4f8fc;
     }
 
 h1,h2,h3{
@@ -20,20 +20,11 @@ font-family:'Playfair Display',serif;
 }
 
 .section-subtitle{
-  font-size:15px;
-  color:#0a66c2;   /* same as your theme blue */
-  margin-bottom:10px;
-  font-weight:600;
-}
-    .section form {
-  margin-top: 20px;
+font-size:16px;
+color:#555;
+margin-bottom:25px;
 }
 
-form {
-  max-width: 400px;
-  margin: 20px auto;
-}
-    
 .card-slider{
 overflow:hidden;
 width:100%;
@@ -158,12 +149,8 @@ text-align:center;
 }
 
     .section {
-  padding: 40px 20px;
-  margin: 20px;
-  border-radius: 18px;
-  background: white;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  text-align: center;
+      padding:30px 20px;
+      text-align:center
     }
 
     .section h2 {
@@ -171,19 +158,17 @@ text-align:center;
       margin-bottom:15px;
     }
 
-    .light { background:#f0f6ff; }
+    .light { background:#eaf2fb; }
 
     .card {
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding:15px;
-  margin:12px 0;
-  border-radius:12px;
-  border: 1px solid rgba(255,255,255,0.3);
-  box-shadow:0 4px 12px rgba(0,0,0,0.08);
-  transition:0.3s;
-}
+      background:white;
+      padding:15px;
+      margin:12px 0;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
     .card:hover {
       transform:translateY(-6px);
     }
@@ -225,7 +210,14 @@ text-align:center;
       transition:0.3s;
       box-shadow:0 4px 12px rgba(0,0,0,0.15);
     }
-
+    
+.section-subtitle{
+  font-size:15px;
+  color:#0a66c2;   /* same as your theme blue */
+  margin-bottom:10px;
+  font-weight:600;
+}
+    
     #healthcamp{
 text-align:center;
 padding:60px 20px;
@@ -428,17 +420,6 @@ text-decoration:none;
 
 .footer-links a:hover {
   color:white;
-}
-    
-/* 🌈 Heading line */
-.section h2::after {
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  margin: 8px auto 0;
-  background: linear-gradient(90deg, #0a66c2, #00c6ff);
-  border-radius: 2px;
 }
   </style>
 </head>
@@ -863,4 +844,4 @@ function checkAvailability() {
 checkAvailability();
     </script>
 </body>
-                                                      </html>
+    </html>
