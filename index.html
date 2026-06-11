@@ -658,7 +658,8 @@ Real sessions, real recovery journeys
 
 <div class="section light" id="our activities">
   <h2>Our Activities</h2>
-  <div class="scroll-gallery">
+  <div class="scroll-gallery"
+    id="videoTrack">
     <video src="video1.mp4" controls></video>
     <video src="video2.mp4" controls></video>
     <video src="video3.mp4" controls></video>
@@ -882,31 +883,27 @@ autoSlide();
 </script>
 
 <script>
-window.addEventListener("load", function() {
+const videoTrack = document.getElementById("videoTrack");
 
-  const gallery = document.querySelector(".scroll-gallery");
+// duplicate content for infinite loop
+videoTrack.innerHTML += videoTrack.innerHTML;
 
-  if (!gallery) return;
+let pos = 0;
+const speed = 0.4;
 
-  gallery.innerHTML += gallery.innerHTML;
+function scrollVideos(){
+  pos += speed;
 
-  let pos = 0;
-
-  function scrollVideos() {
-    pos += 0.5;
-
-    if (pos >= gallery.scrollWidth / 2) {
-      pos = 0;
-    }
-
-    gallery.scrollLeft = pos;
-
-    requestAnimationFrame(scrollVideos);
+  if(pos >= videoTrack.scrollWidth / 2){
+    pos = 0;
   }
 
-  scrollVideos();
+  videoTrack.style.transform = `translateX(-${pos}px)`;
 
-});
+  requestAnimationFrame(scrollVideos);
+}
+
+scrollVideos();
 </script>
 
     <script>
