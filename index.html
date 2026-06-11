@@ -881,29 +881,33 @@ autoSlide();
 
 </script>
 
-    <script>
-const gallery = document.querySelector('.scroll-gallery');
+<script>
+window.addEventListener("load", function() {
 
-gallery.innerHTML += gallery.innerHTML;
+  const gallery = document.querySelector(".scroll-gallery");
 
-let galleryPosition = 0;
-let gallerySpeed = 0.4;
+  if (!gallery) return;
 
-function autoGallery() {
+  gallery.innerHTML += gallery.innerHTML;
 
-  galleryPosition += gallerySpeed;
+  let pos = 0;
 
-  if (galleryPosition >= gallery.scrollWidth / 2) {
-    galleryPosition = 0;
+  function scrollVideos() {
+    pos += 0.5;
+
+    if (pos >= gallery.scrollWidth / 2) {
+      pos = 0;
+    }
+
+    gallery.scrollLeft = pos;
+
+    requestAnimationFrame(scrollVideos);
   }
 
-  gallery.scrollLeft = galleryPosition;
+  scrollVideos();
 
-  requestAnimationFrame(autoGallery);
-}
-
-autoGallery();
-    </script>
+});
+</script>
 
     <script>
 function checkAvailability() {
