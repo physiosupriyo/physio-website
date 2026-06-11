@@ -194,7 +194,7 @@ text-align:center;
 
     .scroll-gallery {
       display:flex;
-      overflow-x:auto;
+      overflow-x:hidden;
       gap:15px;
       padding:10px;
       scroll-snap-type:x mandatory;
@@ -672,7 +672,14 @@ Real sessions, real recovery journeys
   <h2>Watch Our Videos</h2>
 
   <div class="video-container">
-    <iframe width="300" height="500" src="https://youtube.com/shorts/57araDDuR1w?si=MntsFR7BI_r8Ecyr">
+    <iframe
+width="300"
+height="500"
+src="https://www.youtube.com/embed/57araDDuR1w"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
     </iframe>
   </div>
 
@@ -686,7 +693,7 @@ Real sessions, real recovery journeys
 
 <div class="video-container">
   <iframe width="300" height="500"
-  src="https://www.facebook.com/share/r/1AjZv97c6K/&show_text=false"
+  src="https://www.facebook.com/reel/1687547952460514/?mibextid=ZZyLBr&show_text=false"
   style="border:none;overflow:hidden"
   scrolling="no"
   frameborder="0"
@@ -870,6 +877,30 @@ requestAnimationFrame(autoSlide);
 autoSlide();
 
 </script>
+
+    <script>
+const gallery = document.querySelector('.scroll-gallery');
+
+gallery.innerHTML += gallery.innerHTML;
+
+let galleryPosition = 0;
+let gallerySpeed = 0.4;
+
+function autoGallery() {
+
+  galleryPosition += gallerySpeed;
+
+  if (galleryPosition >= gallery.scrollWidth / 2) {
+    galleryPosition = 0;
+  }
+
+  gallery.scrollLeft = galleryPosition;
+
+  requestAnimationFrame(autoGallery);
+}
+
+autoGallery();
+    </script>
 
     <script>
 function checkAvailability() {
