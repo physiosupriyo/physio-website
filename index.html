@@ -173,14 +173,42 @@ text-align:center;
       transform:translateY(-6px);
     }
 
-    input, textarea {
-      width:100%;
-      padding:12px;
-      margin:8px 0;
-      border-radius:8px;
-      border:1px solid #ccc;
-      font-family:'Montserrat',sans-serif;
+/* ========================================= BOOK APPOINTMENT - PERFECT FIELD ALIGNMENT ========================================= */
+    
+#appointment input,
+#appointment textarea {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+}
+/* Same height and spacing */
+#appointment input {
+    height: 72px;
+    padding: 0 22px;
+}
+#appointment textarea {
+    min-height: 100px;
+    padding: 18px 22px;
+    resize: vertical;
+}
+/* Same font */
+#appointment input,
+#appointment textarea {
+    font-family: inherit;
+    font-size: 18px;
+}
+
+/* Mobile alignment */
+
+@media (max-width: 600px) {
+    #appointment input,
+    #appointment textarea {
+        width: 100%;
+        box-sizing: border-box;
     }
+}
 
     iframe {
       border-radius:12px;
@@ -333,13 +361,18 @@ text-decoration:none;
       100% { transform:scale(1); opacity:1; }
     }
 
+
+/* ===================================================== MOBILE ===================================================== */
+    
     @media (max-width: 480px) {
       .counter-box {
         flex:1 1 100%;
         max-width:100%;
       }
     }
-    /* Patient Review Smooth Scroll */
+
+/* ===================================================== REVIEW ===================================================== */
+    
 .review-slider-container {
   max-width: 400px;
   height: 220px;
@@ -377,6 +410,8 @@ text-decoration:none;
   background:white;
   padding:4px;
 }
+
+/* ===================================================== FOOTER ===================================================== */
 
 .dark-footer {
   background:#0a1f3c;
@@ -427,9 +462,7 @@ text-decoration:none;
   margin: 15px auto;  /* center button */
 }
 
-    /* =====================================================
-   ALL HEALTH CAMPS INTERFACE
-===================================================== */
+/* ===================================================== ALL HEALTH CAMPS INTERFACE ===================================================== */
 
 .health-camps-interface {
   position: fixed;
@@ -490,9 +523,9 @@ text-decoration:none;
   transform: rotate(90deg);
   background: #003b73;
 }
-/* =====================================================
-   CAMP CARDS
-===================================================== */
+    
+/* ===================================================== CAMP CARDS ===================================================== */
+    
 .health-camp-item {
   max-width: 1000px;
   margin: 25px auto;
@@ -552,9 +585,9 @@ text-decoration:none;
   background: #003b73;
   transform: scale(1.04);
 }
-/* =====================================================
-   MOBILE
-===================================================== */
+    
+/* ===================================================== MOBILE ===================================================== */
+    
 @media (max-width: 600px) {
   .health-camps-header {
     padding: 30px 18px 15px;
@@ -588,9 +621,7 @@ text-decoration:none;
   }
 }
 
-    /* =========================================
-   15TH AUGUST INDEPENDENCE DAY SECTION
-========================================= */
+/* ========================================= 15TH AUGUST INDEPENDENCE DAY SECTION ========================================= */
 
 .independence-section {
   padding: 40px 20px;
@@ -655,7 +686,9 @@ text-decoration:none;
   font-size: 15px !important;
   margin-top: 20px !important;
 }
-/* MOBILE */
+
+/* ===================================================== MOBILE ===================================================== */
+    
 @media (max-width: 600px) {
   .independence-section {
     padding: 25px 15px;
