@@ -173,43 +173,6 @@ text-align:center;
       transform:translateY(-6px);
     }
 
-/* ========================================= BOOK APPOINTMENT - PERFECT FIELD ALIGNMENT ========================================= */
-    
-#appointment input,
-#appointment textarea {
-    width: 100%;
-    box-sizing: border-box;
-    display: block;
-    margin-left: 0;
-    margin-right: 0;
-}
-/* Same height and spacing */
-#appointment input {
-    height: 72px;
-    padding: 0 22px;
-}
-#appointment textarea {
-    min-height: 100px;
-    padding: 18px 22px;
-    resize: vertical;
-}
-/* Same font */
-#appointment input,
-#appointment textarea {
-    font-family: inherit;
-    font-size: 18px;
-}
-
-/* Mobile alignment */
-
-@media (max-width: 600px) {
-    #appointment input,
-    #appointment textarea {
-        width: 100%;
-        box-sizing: border-box;
-    }
-}
-
     iframe {
       border-radius:12px;
       box-shadow:0 4px 15px rgba(0,0,0,0.2);
@@ -710,7 +673,275 @@ text-decoration:none;
     font-size: 27px;
   }
 }
+    /* ===================================================== END 15TH AUGUSTSECTION ===================================================== */
+
+/* ===================================================== BEAUTIFUL BOOK APPOINTMENT SECTION ===================================================== */
+
+    #book-appointment {
+  padding: 55px 20px;
+  background: linear-gradient(135deg, #eef7ff, #f8fbff);
+  text-align: center;
+}
+
+/* ================= MAIN CARD ================= */
+
+.appointment-card {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 40px 35px;
+  box-sizing: border-box;
+  box-shadow: 0 15px 45px rgba(0, 75, 140, 0.14);
+}
+
+/* ================= HEADING ================= */
+
+.appointment-heading {
+  margin-bottom: 30px;
+}
+.appointment-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e8f3ff;
+  font-size: 30px;
+}
+.appointment-heading h2 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  color: #111;
+  line-height: 1.2;
+}
+.appointment-heading h2::after {
+  content: "";
+  display: block;
+  width: 65px;
+  height: 4px;
+  margin: 14px auto;
+  background: #0a66c2;
+  border-radius: 10px;
+}
+.appointment-heading p {
+  max-width: 550px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 16px;
+  line-height: 1.7;
+}
+/* ================= FORM ================= */
+#book-appointment form {
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* ================= FIELD ================= */
+
+.appointment-field {
+  width: 100%;
+  margin-bottom: 22px;
+}
+.appointment-field > label {
+  display: block;
+  margin-bottom: 8px;
+  padding-left: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* ================= NAME + PHONE ================= */
+
+.appointment-field input[type="text"],
+.appointment-field input[type="tel"] {
+  width: 100%;
+  height: 64px;
+  box-sizing: border-box;
+  display: block;
+  padding: 0 20px;
+  border: 2px solid #e1e7ed;
+  background: #ffffff;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 17px;
+  color: #222;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* ================= PROBLEM TEXTAREA ================= */
+
+.appointment-field textarea {
+  width: 100%;
+  min-height: 125px;
+  box-sizing: border-box;
+  display: block;
+  padding: 18px 20px;
+  border: 2px solid #e1e7ed;
+  background: #ffffff;
+  border-radius: 15px;
+  font-family: inherit;
+  font-size: 17px;
+  color: #222;
+  outline: none;
+  resize: vertical;
+  transition: all 0.3s ease;
+}
+/* ================= PLACEHOLDER ================= */
+.appointment-field input::placeholder,
+.appointment-field textarea::placeholder {
+  color: #999;
+}
+
+/* ===================================================== SELECT YOUR PROBLEM ===================================================== */
     
+.problem-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 10px;
+}
+/* EACH PROBLEM CARD */
+.problem-option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 12px 14px;
+  box-sizing: border-box;
+  border: 2px solid #e1e7ed;
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+/* HIDE DEFAULT CHECKBOX */
+.problem-option input[type="checkbox"] {
+  width: 19px !important;
+  height: 19px !important;
+  margin: 0 !important;
+  flex-shrink: 0;
+  accent-color: #0a66c2;
+  cursor: pointer;
+}
+/* TEXT */
+.problem-option span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+  line-height: 1.3;
+}
+/* HOVER */
+.problem-option:hover {
+  border-color: #0a66c2;
+  background: #f5faff;
+  transform: translateY(-2px);
+}
+/* SELECTED CARD */
+.problem-option:has(input:checked) {
+  border-color: #0a66c2;
+  background: #eaf4ff;
+  box-shadow: 0 4px 12px rgba(10,102,194,0.10);
+}
+.problem-option:has(input:checked) span {
+  color: #07549e;
+}
+
+/* ================= INPUT FOCUS ================= */
+
+.appointment-field input[type="text"]:focus,
+.appointment-field input[type="tel"]:focus,
+.appointment-field textarea:focus {
+  border-color: #0a66c2;
+  box-shadow: 0 0 0 4px rgba(10,102,194,0.10);
+  transform: translateY(-2px);
+}
+
+/* ================= SUBMIT BUTTON ================= */
+
+.appointment-submit {
+  width: 100%;
+  min-height: 58px;
+  margin-top: 5px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 35px;
+  background: #20d466;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 700
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 7px 20px rgba(32,212,102,0.25);
+}
+.appointment-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(32,212,102,0.35);
+}
+
+/* ================= NOTE ================= */
+
+.appointment-note {
+  margin-top: 20px;
+  color: #777;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ===================================================== MOBILE ===================================================== */
+    
+@media (max-width: 600px) {
+  #book-appointment {
+    padding: 30px 12px;
+  }
+  .appointment-card {
+    padding: 30px 18px;
+    border-radius: 22px;
+  }
+  .appointment-heading h2 {
+    font-size: 32px;
+  }
+  .appointment-heading p {
+    font-size: 14px;
+  }
+  .appointment-icon {
+    width: 58px;
+    height: 58px;
+    font-size: 27px;
+  }
+  .appointment-field input[type="text"],
+  .appointment-field input[type="tel"] {
+    height: 60px;
+  }
+  .appointment-field input,
+  .appointment-field textarea {
+    font-size: 16px;
+  }
+  .appointment-field textarea {
+    min-height: 115px;
+  }
+  .problem-options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .problem-option {
+    min-height: 50px;
+  }
+  .appointment-submit {
+    font-size: 16px;
+  }
+}
+    /* ===================================================== END BOOK APPOINTMENT SECTION ===================================================== */
+
   </style>
 </head>
 
@@ -1034,6 +1265,112 @@ Please grab the golden opportunity. Don’t miss it.
   </div>
 </div>
 
+   <!-- ================= CAMP 4 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp4.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Health Camp 4
+      </h2>
+
+      <p>
+        📍 Add Camp Location
+      </p>
+
+      <p>
+        📅 Add Camp Date
+      </p>
+
+      <button
+        onclick="openCampGallery('camp4')"
+      >
+        View Photos & Videos →
+      </button>
+    </div>
+  </div>
+</div>
+
+   <!-- ================= CAMP 5 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp5.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Health Camp 5
+      </h2>
+
+      <p>
+        📍 Add Camp Location
+      </p>
+
+      <p>
+        📅 Add Camp Date
+      </p>
+
+      <button
+        onclick="openCampGallery('camp5')"
+      >
+        View Photos & Videos →
+      </button>
+    </div>
+  </div>
+</div>
+
+   <!-- ================= CAMP 6 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp6.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Health Camp 6
+      </h2>
+
+      <p>
+        📍 Add Camp Location
+      </p>
+
+      <p>
+        📅 Add Camp Date
+      </p>
+
+      <button
+        onclick="openCampGallery('camp6')"
+      >
+        View Photos & Videos →
+      </button>
+    </div>
+  </div>
+</div>
+
+  <!-- ================= END FREE PHYSIOTHERAPY HEALTH CAMP ================= -->
+
+  <!-- ================= PATIENT REVIEW ================= -->
+
   <div class="section" id="patient review">
   <h2>Patient Review</h2>
 
@@ -1057,6 +1394,10 @@ Please grab the golden opportunity. Don’t miss it.
   </div>
 
 <div class="section light" id="previous treatments">
+
+  <!-- ================= END PATIENT REVIEW ================= -->
+
+  <!-- ================= PREVIOUS TREATMENTS ================= -->
 
 <h2>Previous Treatments</h2>
 
@@ -1108,6 +1449,10 @@ Real sessions, real recovery journeys
 
 </div>
 
+ <!-- ================= END PREVIOUS TREATMENTS ================= -->
+
+ <!-- ================= OUR ACTIVITIES ================= -->
+    
 <div class="section light" id="our activities">
   <h2>Our Activities</h2>
   <div class="scroll-gallery"
@@ -1136,6 +1481,7 @@ allowfullscreen>
     </iframe>
   </div>
 
+<!-- ================= END OUR ACTIVITIES ================= -->
 
   <div style="text-align:center; margin-top:15px;">
     <a href="https://www.youtube.com/@physiosupriyo9539" target="_blank">
@@ -1162,18 +1508,165 @@ allowfullscreen>
     <button class="btn btn-blue">Visit Facebook Page</button>
   </a>
 </div> 
-  
-<div class="section light"  id="book appointment">
-  <h2>Book Appointment</h2>
+<!-- ================= BOOK APPOINTMENT ================= -->
 
-  <form action="https://formsubmit.co/supriyochatterjee77@gmail.com" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="tel" name="phone" placeholder="Phone Number" required>
-    <textarea name="message" placeholder="Your Problem"></textarea>
+<div class="section light" id="book-appointment">
 
-    <button class="btn btn-green" type="submit">Submit</button>
-  </form>
+  <div class="appointment-card">
+
+    <div class="appointment-heading">
+
+      <div class="appointment-icon">
+        📅
+      </div>
+
+      <h2>Book Appointment</h2>
+
+      <p>
+        Take the first step towards better movement,
+        better comfort and better health.
+      </p>
+
+    </div>
+
+
+    <form
+      action="https://formsubmit.co/supriyochatterjee77@gmail.com"
+      method="POST"
+    >
+
+      <!-- FormSubmit Settings -->
+
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Physiotherapy Appointment Request"
+      >
+      <input
+        type="hidden"
+        name="_captcha"
+        value="false"
+      >
+      <input
+        type="hidden"
+        name="_template"
+        value="table"
+      >
+      
+      <!-- NAME -->
+      
+      <div class="appointment-field">
+        <label for="patient-name">
+          Your Name
+        </label>
+        <input
+          id="patient-name"
+          type="text"
+          name="name"
+          placeholder="Enter your full name"
+          required
+        >
+      </div>
+      
+      <!-- PHONE -->
+      
+      <div class="appointment-field">
+        <label for="patient-phone">
+          Phone Number
+        </label>
+        <input
+          id="patient-phone"
+          type="tel"
+          name="phone"
+          placeholder="Enter your phone number"
+          required
+        >
+      </div>
+      
+      <!-- ================= SELECT PROBLEM ================= -->
+
+<div class="appointment-field">
+  <label>
+    Select Your Problem
+  </label>
+  <div class="problem-options">
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Back Pain">
+      <span>Back Pain</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Neck Pain / Cervical Pain">
+      <span>Neck Pain / Cervical Pain</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Shoulder Pain">
+      <span>Shoulder Pain</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Knee Pain">
+      <span>Knee Pain</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Arthritis">
+      <span>Arthritis</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Stroke / CVA">
+      <span>Stroke / CVA</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Parkinson's Disease">
+      <span>Parkinson's Disease</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Frozen Shoulder">
+      <span>Frozen Shoulder</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Sports Injury">
+      <span>Sports Injury</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Posture Problem">
+      <span>Posture Problem</span>
+    </label>
+    <label class="problem-option">
+      <input type="checkbox" name="problem[]" value="Other">
+      <span>Other</span>
+    </label>
+  </div>
 </div>
+
+      <!-- ================= PROBLEM DETAILS ================= -->
+
+<div class="appointment-field">
+  <label for="patient-problem">
+    Tell Us More About Your Problem
+  </label>
+  <textarea
+    id="patient-problem"
+    name="message"
+    placeholder="Please describe your pain, problem or symptoms..."
+    required
+  ></textarea>
+</div>
+
+      <!-- SUBMIT -->
+      <button
+        class="appointment-submit"
+        type="submit"
+      >
+        📩 Submit Appointment Request
+      </button>
+    </form>
+    <div class="appointment-note">
+      🔒 Your information is used only to respond to
+      your appointment request.
+    </div>
+  </div>
+</div>
+    
+<!-- ================= END BOOK APPOINTMENT ================= -->
 
 <div class="section" id="our location"
   <h2>Our Location</h2>
