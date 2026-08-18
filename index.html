@@ -426,6 +426,167 @@ text-decoration:none;
   display: block;
   margin: 15px auto;  /* center button */
 }
+
+    /* =====================================================
+   ALL HEALTH CAMPS INTERFACE
+===================================================== */
+
+.health-camps-interface {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #f4f8fc;
+  overflow-y: auto;
+  display: none;
+  padding-bottom: 50px;
+}
+/* OPEN INTERFACE */
+.health-camps-interface.active {
+  display: block;
+}
+/* HEADER */
+.health-camps-header {
+  max-width: 1000px;
+  margin: auto;
+  padding: 45px 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.health-camps-small-title {
+  color: #0a66c2;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.health-camps-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin: 0 0 10px;
+  color: #222;
+}
+.health-camps-header p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 650px;
+}
+/* CLOSE BUTTON */
+.health-camps-close {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #0a66c2;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+.health-camps-close:hover {
+
+  transform: rotate(90deg);
+  background: #003b73;
+}
+/* =====================================================
+   CAMP CARDS
+===================================================== */
+.health-camp-item {
+  max-width: 1000px;
+  margin: 25px auto;
+  background: white;
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 0 7px 25px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+.health-camp-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+/* CAMP IMAGE */
+.health-camp-item img {
+  width: 42%;
+  min-height: 280px;
+  object-fit: cover;
+}
+/* CAMP CONTENT */
+.health-camp-item-content {
+  padding: 30px;
+  flex: 1;
+}
+.health-camp-item-content span {
+  color: #0a66c2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.health-camp-item-content h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin: 12px 0 18px;
+  color: #222;
+}
+.health-camp-item-content p {
+  color: #555;
+  font-size: 16px;
+  margin: 8px 0;
+}
+/* VIEW PHOTOS BUTTON */
+.health-camp-item-content button {
+  margin-top: 18px;
+  padding: 13px 22px;
+  border: none;
+  border-radius: 30px;
+  background: #0a66c2;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.health-camp-item-content button:hover {
+  background: #003b73;
+  transform: scale(1.04);
+}
+/* =====================================================
+   MOBILE
+===================================================== */
+@media (max-width: 600px) {
+  .health-camps-header {
+    padding: 30px 18px 15px;
+  }
+  .health-camps-header h1 {
+    font-size: 30px;
+  }
+  .health-camps-header p {
+    font-size: 14px;
+  }
+  .health-camps-close {
+    width: 42px;
+    height: 42px;
+    font-size: 25px;
+  }
+  .health-camp-item {
+    margin: 18px;
+    display: block;
+    border-radius: 18px;
+  }
+  .health-camp-item img {
+    width: 100%;
+    height: 230px;
+    min-height: 0;
+  }
+  .health-camp-item-content {
+    padding: 22px;
+  }
+  .health-camp-item-content h2 {
+    font-size: 23px;
+  }
+}
   </style>
 </head>
 
@@ -570,18 +731,179 @@ DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab P
 
   <img src="camp.jpg" alt="Free Physiotherapy Health Camp" class="camp-photo">
 
-  <p class="camp-text">
-  <strong>Physio Supriyo – the team for one, the team for all.</strong><br><br>
+ <p class="camp-text">
+<strong>Physio Supriyo – the team for one, the team for all.</strong><br><br>
 
-  We often organise free physiotherapy health camps and health check-ups 
-  in different apartments and residential buildings to spread awareness 
-  about proper physical health and rehabilitation.<br><br>
+We often organise free physiotherapy health camps and health check-ups 
+in different apartments and residential buildings to spread awareness 
+about proper physical health and rehabilitation.<br><br>
 
-  Please grab the golden opportunity. Don’t miss it.
-  </p>
+Please grab the golden opportunity. Don’t miss it.
+</p>
 
-  </section>
-  
+
+<!-- VIEW ALL HEALTH CAMPS BUTTON -->
+
+<div style="text-align:center; margin-top:30px;">
+
+  <button
+    onclick="openHealthCamps()"
+    style="
+      background:#0a66c2;
+      color:white;
+      border:none;
+      padding:15px 28px;
+      border-radius:30px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    "
+  >
+    🏥 View All Health Camps →
+  </button>
+</div>
+</section>
+
+<!-- ================= ALL HEALTH CAMPS INTERFACE ================= -->
+
+<div id="healthCampsInterface" class="health-camps-interface">
+
+  <!-- Top Header -->
+
+  <div class="health-camps-header">
+
+    <div>
+
+      <p class="health-camps-small-title">
+        PHYSIO SUPRIYO REHAB TEAM
+      </p>
+
+      <h1>Our Health Camps</h1>
+
+      <p>
+        Explore our free physiotherapy health camps,
+        community activities and memorable moments.
+      </p>
+
+    </div>
+
+
+    <button
+      class="health-camps-close"
+      onclick="closeHealthCamps()"
+    >
+      ×
+    </button>
+
+  </div>
+
+  <!-- ================= CAMP 1 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Siddha Galaxia Health Camp
+      </h2>
+
+      <p>
+        📍 Siddha Galaxia
+      </p>
+
+      <p>
+        📅 14th December 2025
+      </p>
+
+      <button
+        onclick="openCampGallery('camp1')"
+      >
+        View Photos & Videos →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= CAMP 2 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Health Camp 2
+      </h2>
+
+      <p>
+        📍 Add Camp Location
+      </p>
+
+      <p>
+        📅 Add Camp Date
+      </p>
+
+      <button
+        onclick="openCampGallery('camp2')"
+      >
+        View Photos & Videos →
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ================= CAMP 3 ================= -->
+
+  <div class="health-camp-item">
+
+    <img
+      src="camp.jpg"
+      alt="Free Physiotherapy Health Camp"
+    >
+
+    <div class="health-camp-item-content">
+
+      <span>FREE PHYSIOTHERAPY HEALTH CAMP</span>
+
+      <h2>
+        Health Camp 3
+      </h2>
+
+      <p>
+        📍 Add Camp Location
+      </p>
+
+      <p>
+        📅 Add Camp Date
+      </p>
+
+      <button
+        onclick="openCampGallery('camp3')"
+      >
+        View Photos & Videos →
+      </button>
+    </div>
+  </div>
+</div>
+
   <div class="section" id="patient review">
   <h2>Patient Review</h2>
 
@@ -925,5 +1247,35 @@ function checkAvailability() {
 
 checkAvailability();
     </script>
+
+<script>
+/* =========================================
+   OPEN ALL HEALTH CAMPS
+========================================= */
+function openHealthCamps() {
+  const healthCamps =
+    document.getElementById("healthCampsInterface");
+  healthCamps.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+/* =========================================
+   CLOSE ALL HEALTH CAMPS
+========================================= */
+function closeHealthCamps() {
+  const healthCamps =
+    document.getElementById("healthCampsInterface");
+  healthCamps.classList.remove("active");
+  document.body.style.overflow = "";
+}
+/* =========================================
+   ESC KEY TO CLOSE
+========================================= */
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeHealthCamps();
+  }
+});
+</script>
+    
 </body>
     </html>
