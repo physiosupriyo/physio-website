@@ -503,6 +503,26 @@ text-decoration:none;
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
+
+    /*  CAMP NUMBER */
+.health-camp-number {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #0a66c2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+
+}
 /* CAMP IMAGE */
 .health-camp-item img {
   width: 42%;
@@ -948,7 +968,6 @@ text-decoration:none;
   text-align: center;
 }
 
-
 /* MAIN PHOTO */
 
 .community-main-photo {
@@ -963,7 +982,6 @@ text-decoration:none;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
-
 /* MAIN DESCRIPTION */
 
 .community-main-text {
@@ -974,455 +992,273 @@ text-decoration:none;
   color: #555;
 }
 
-
 /* MAIN BUTTON */
 
 .community-main-button {
-
   background: #0a66c2;
-
   color: white;
-
   border: none;
-
   padding: 15px 28px;
-
   border-radius: 30px;
-
   font-size: 16px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-
   transition: 0.3s;
 
 }
 
-
 .community-main-button:hover {
-
   background: #003b73;
-
   transform: translateY(-3px);
-
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 
 }
 
-
-
-/* =========================================================
-   ALL COMMUNITY PROGRAMS INTERFACE
-========================================================= */
+/* ========================================================= ALL COMMUNITY PROGRAMS INTERFACE ========================================================= */
 
 .community-programs-interface {
-
   position: fixed;
-
   inset: 0;
-
   z-index: 9999;
-
   background: #f4f8fc;
-
   overflow-y: auto;
-
   display: none;
-
   padding-bottom: 60px;
 
 }
-
-
+    
 /* OPEN INTERFACE */
-
 .community-programs-interface.active {
-
   display: block;
 
 }
 
-
-
-/* =========================================================
-   HEADER
-========================================================= */
+/* ========================================================= HEADER ========================================================= */
 
 .community-programs-header {
-
   max-width: 1000px;
-
   margin: auto;
-
   padding: 45px 25px 25px;
-
   display: flex;
-
   justify-content: space-between;
-
   align-items: flex-start;
 
 }
 
-
 .community-programs-small-title {
-
   color: #0a66c2;
-
   font-size: 13px;
-
   font-weight: 700;
-
   letter-spacing: 1.5px;
-
   margin-bottom: 8px;
-
+  
 }
 
-
 .community-programs-header h1 {
-
   font-family: 'Playfair Display', serif;
-
   font-size: 40px;
-
   margin: 0 0 10px;
-
   color: #222;
 
 }
 
-
 .community-programs-header p {
-
   color: #555;
-
   font-size: 16px;
-
   line-height: 1.6;
-
   max-width: 650px;
 
 }
 
-
-
-/* =========================================================
-   CLOSE BUTTON
-========================================================= */
+/* ========================================================= CLOSE BUTTON ========================================================= */
 
 .community-programs-close {
-
   width: 48px;
-
   height: 48px;
-
   border: none;
-
   border-radius: 50%;
-
   background: #0a66c2;
-
   color: white;
-
   font-size: 30px;
-
   cursor: pointer;
-
   flex-shrink: 0;
-
   transition: 0.3s;
 
 }
 
-
 .community-programs-close:hover {
-
   transform: rotate(90deg);
-
   background: #003b73;
 
 }
 
-
-
-/* ========================================================= 
-    COMMUNITY PROGRAM CARDS 
-    ========================================================= */
+/* ========================================================= COMMUNITY PROGRAM CARDS ========================================================= */
 
 .community-program-item {
-
   max-width: 1000px;
-
   margin: 25px auto;
-
   background: white;
-
   border-radius: 22px;
-
   overflow: hidden;
-
   display: flex;
-
   position: relative;
-
   box-shadow: 0 7px 25px rgba(0,0,0,0.12);
-
   transition: 0.3s;
 
 }
 
-
 .community-program-item:hover {
-
   transform: translateY(-5px);
-
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 
 }
 
-
-
 /* PROGRAM NUMBER */
-
 .community-program-number {
-
   position: absolute;
-
   top: 18px;
-
   left: 18px;
-
   width: 48px;
-
   height: 48px;
-
   border-radius: 50%;
-
   background: #0a66c2;
-
   color: white;
-
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   font-size: 15px;
-
   font-weight: 700;
-
   z-index: 2;
-
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 
 }
 
-
-
 /* PROGRAM IMAGE */
 
 .community-program-item img {
-
   width: 42%;
-
   min-height: 300px;
-
   object-fit: cover;
 
 }
 
-
-
 /* PROGRAM CONTENT */
-
 .community-program-item-content {
-
   padding: 30px;
-
   flex: 1;
-
+  
 }
-
-
+    
 .community-program-item-content span {
-
   color: #0a66c2;
-
   font-size: 12px;
-
   font-weight: 700;
-
   letter-spacing: 1px;
 
 }
 
-
 .community-program-item-content h2 {
-
   font-family: 'Playfair Display', serif;
-
   font-size: 28px;
-
   margin: 12px 0 18px;
-
   color: #222;
 
 }
 
-
 .community-program-item-content p {
-
   color: #555;
-
   font-size: 16px;
-
   margin: 8px 0;
 
 }
 
-
-
-/* =========================================================
-   VIEW GALLERY BUTTON
-========================================================= */
+/* ========================================================= VIEW GALLERY BUTTON ========================================================= */
 
 .community-program-item-content button {
-
   margin-top: 18px;
-
   padding: 13px 22px;
-
   border: none;
-
   border-radius: 30px;
-
   background: #0a66c2;
-
   color: white;
-
   font-size: 15px;
-
   font-weight: 600;
-
   cursor: pointer;
-
   transition: 0.3s;
 
 }
 
-
 .community-program-item-content button:hover {
-
   background: #003b73;
-
   transform: scale(1.04);
-
+  
 }
 
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
+/* ========================================================= MOBILE ========================================================= */
 
 @media (max-width: 600px) {
-
   .community-programs-header {
-
     padding: 30px 18px 15px;
 
   }
 
-
   .community-programs-header h1 {
-
     font-size: 30px;
 
   }
 
-
   .community-programs-header p {
-
     font-size: 14px;
 
   }
 
-
   .community-programs-close {
-
     width: 42px;
-
     height: 42px;
-
     font-size: 25px;
 
   }
 
-
   .community-program-item {
-
     margin: 18px;
-
     display: block;
-
     border-radius: 18px;
 
   }
 
-
   .community-program-item img {
-
     width: 100%;
-
     height: 250px;
-
     min-height: 0;
 
   }
 
-
   .community-program-item-content {
-
     padding: 22px;
 
   }
 
-
   .community-program-item-content h2 {
-
     font-size: 23px;
 
   }
 
 
   .community-program-number {
-
     top: 15px;
-
     left: 15px;
-
     width: 42px;
-
     height: 42px;
-
     font-size: 13px;
 
   }
 
-
   .community-main-text {
-
     padding: 0 18px;
-
     font-size: 15px;
 
   }
-
 }
     
   /* ========================================================= END COMMUNITY PROGRAMS MAIN SECTION ========================================================= */  
@@ -1660,6 +1496,11 @@ Please grab the golden opportunity. Don’t miss it.
   <!-- ================= CAMP 1 ================= -->
 
   <div class="health-camp-item">
+
+ <div class="health-camp-number">
+      01
+    </div>
+    
     <img
       src="camp1.jpg"
       alt="Free Physiotherapy Health Camp"
@@ -1686,6 +1527,11 @@ Please grab the golden opportunity. Don’t miss it.
   <!-- ================= CAMP 2 ================= -->
 
   <div class="health-camp-item">
+
+ <div class="health-camp-number">
+      02
+    </div>
+    
     <img
       src="camp.jpg"
       alt="Free Physiotherapy Health Camp"
@@ -1712,6 +1558,11 @@ Please grab the golden opportunity. Don’t miss it.
   <!-- ================= CAMP 3 ================= -->
 
   <div class="health-camp-item">
+
+ <div class="health-camp-number">
+      03
+    </div>
+    
     <img
       src="camp3.jpg"
       alt="Free Physiotherapy Health Camp"
@@ -1738,6 +1589,11 @@ Please grab the golden opportunity. Don’t miss it.
    <!-- ================= CAMP 4 ================= -->
 
   <div class="health-camp-item">
+
+ <div class="health-camp-number">
+      04
+    </div>
+    
     <img
       src="camp4.jpg"
       alt="Free Physiotherapy Health Camp"
@@ -1764,6 +1620,11 @@ Please grab the golden opportunity. Don’t miss it.
    <!-- ================= CAMP 5 ================= -->
 
   <div class="health-camp-item">
+
+ <div class="health-camp-number">
+      05
+    </div>
+    
     <img
       src="camp5.jpg"
       alt="Free Physiotherapy Health Camp"
@@ -1790,6 +1651,11 @@ Please grab the golden opportunity. Don’t miss it.
    <!-- ================= CAMP 6 ================= -->
 
   <div class="health-camp-item">
+
+     <div class="health-camp-number">
+      06
+    </div>
+    
     <img
       src="camp6.jpg"
       alt="Free Physiotherapy Health Camp"
