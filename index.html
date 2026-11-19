@@ -625,96 +625,53 @@ text-decoration:none;
   }
 }
 
-/* ========================================= 15TH AUGUST INDEPENDENCE DAY SECTION ========================================= */
+/* ========================================= BIRTHDAY VIDEOS ========================================= */
 
-.independence-section {
-  padding: 40px 20px;
-  text-align: center;
-  background: #f4f8fc;
-}
-.independence-card {
-  max-width: 750px;
-  margin: auto;
-  background: white;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow:
-    0 8px 25px rgba(0,0,0,0.15);
-}
-/* BANNER */
-.independence-banner {
-  width: 100%;
-  display: block;
-  height: auto;
-  object-fit: cover;
-}
-/* WRITING */
-.independence-content {
-  padding: 30px 25px 35px;
-  text-align: center;
-}
-.independence-content h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 27px;
-  line-height: 1.5;
-  margin: 0 0 20px;
-  color: #0a66c2;
-}
-.independence-content p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #444;
-  margin: 15px auto;
-  max-width: 650px;
-}
-.independence-main-text {
-  font-weight: 600;
-  font-size: 17px !important;
-  color: #222 !important;
-}
-.independence-highlight {
-  margin-top: 25px !important;
-  padding: 18px;
-  border-radius: 15px;
-  background: #f4f8fc;
-  font-weight: 600;
-  color: #333 !important;
-}
-.independence-content h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px;
-  margin: 25px 0 15px;
-  color: #e06b00;
-}
-.independence-footer-text {
-  font-size: 15px !important;
-  margin-top: 20px !important;
+    .birthday-section {
+    padding: 40px 6%;
+    text-align: center;
+    background: #fff1f2;
 }
 
-/* ===================================================== MOBILE ===================================================== */
-    
-@media (max-width: 600px) {
-  .independence-section {
-    padding: 25px 15px;
-  }
-  .independence-card {
-    border-radius: 18px;
-  }
-  .independence-content {
-    padding: 25px 18px 30px;
-  }
-  .independence-content h2 {
-    font-size: 22px;
-  }
-  .independence-content p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-  .independence-content h3 {
-    font-size: 27px;
-  }
+.birthday-section h2 {
+    color: #e11d48;
+    margin-bottom: 15px;
 }
-    /* ===================================================== END 15TH AUGUSTSECTION ===================================================== */
+
+.birthday-section p {
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.birthday-videos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.birthday-videos video {
+    width: 100%;
+    aspect-ratio: 9/16;
+    object-fit: contain;
+    background: #111;
+    border-radius: 15px;
+}
+
+.birthday-section h3 {
+    margin-top: 25px;
+    color: #be123c;
+}
+
+@media(max-width:600px) {
+    .birthday-videos {
+        grid-template-columns: 1fr;
+    }
+}
+
+    /* ===================================================== END BIRTHDAY VIDEOS ===================================================== */
 
 /* ===================================================== BEAUTIFUL BOOK APPOINTMENT SECTION ===================================================== */
 
@@ -1207,13 +1164,10 @@ text-decoration:none;
   font-weight: 600;
   cursor: pointer;
   transition: 0.3s;
-
 }
-
 .community-program-item-content button:hover {
   background: #003b73;
   transform: scale(1.04);
-  
 }
 
 /* ========================================================= MOBILE ========================================================= */
@@ -1221,63 +1175,44 @@ text-decoration:none;
 @media (max-width: 600px) {
   .community-programs-header {
     padding: 30px 18px 15px;
-
   }
-
   .community-programs-header h1 {
     font-size: 30px;
-
   }
-
   .community-programs-header p {
     font-size: 14px;
-
   }
-
   .community-programs-close {
     width: 42px;
     height: 42px;
     font-size: 25px;
-
   }
-
   .community-program-item {
     margin: 18px;
     display: block;
     border-radius: 18px;
-
   }
-
   .community-program-item img {
     width: 100%;
     height: 250px;
     min-height: 0;
-
   }
-
   .community-program-item-content {
     padding: 22px;
-
   }
-
   .community-program-item-content h2 {
     font-size: 23px;
-
   }
-
   .community-program-number {
     top: 15px;
     left: 15px;
     width: 42px;
     height: 42px;
     font-size: 13px;
-
   }
-
   .community-main-text {
     padding: 0 18px;
     font-size: 15px;
-
   }
 }
     
@@ -1403,50 +1338,25 @@ DPT | Senior Physiotherapist | N.C.V.T in Physio (Govt of India) | Regd. Rehab P
   </p>
 </div>
 
-<!-- ================= 15TH AUGUST INDEPENDENCE DAY ================= -->
+<!-- ================= Birthday VIDEO ================= -->
+    
+    <section id="birthday" class="birthday-section">
+    <h2>❤️ Birthday Celebration at Radha Krishna Old Age Home</h2>
+    <p>A special day filled with love, blessings and beautiful smiles. Sharing happiness with the elderly made my birthday unforgettable.</p><div class="birthday-videos">
+    <video controls playsinline preload="metadata">
+        <source src="assets/videos/1000124201.mp4" type="video/mp4">
+    </video>
 
-<div class="section independence-section">
-  <div class="independence-card">
-    <img
-      src="independence2026.jpg"
-      alt="15th August Independence Day 2026"
-      class="independence-banner"
-    >
-    <div class="independence-content">
-      <h2>
-        🇮🇳 স্বাধীনতার ৮০তম বর্ষে আন্তরিক শ্রদ্ধা ও শুভেচ্ছা 🇮🇳
-      </h2>
-      <p class="independence-main-text">
-        ১৫ই আগস্ট — আমাদের গর্ব, আমাদের স্বাধীনতা,
-        আমাদের অগণিত বীর বিপ্লবীর আত্মত্যাগের স্মরণীয় দিন।
-      </p>
-      <p>
-        যাঁদের সাহস, আত্মত্যাগ ও অদম্য সংগ্রামের বিনিময়ে
-        আমরা আজ স্বাধীন ভারতের নাগরিক,
-        তাঁদের প্রত্যেককে জানাই সশ্রদ্ধ প্রণাম ও কৃতজ্ঞতা।
-      </p>
-      <p>
-        তাঁদের স্বপ্নের ভারতকে আরও শক্তিশালী,
-        সুস্থ, সুন্দর ও মানবিক করে তোলার দায়িত্ব
-        আমাদের প্রত্যেকের।
-      </p>
-      <p class="independence-highlight">
-        ❤️ তাঁদের আত্মত্যাগ আমাদের প্রেরণা।<br>
-        🇮🇳 তাঁদের স্বাধীনতা আমাদের গর্ব।<br>
-        🤝 ঐক্যবদ্ধ ভারত আমাদের অঙ্গীকার।
-      </p>
-      <h3>
-        🇮🇳 জয় হিন্দ! 🇮🇳
-      </h3>
-      <p class="independence-footer-text">
-        Physio Rehab Team-এর পক্ষ থেকে
-        সকল ভারতবাসীকে জানাই
-        <strong>স্বাধীনতা দিবসের আন্তরিক শুভেচ্ছা ও অভিনন্দন।</strong>
-      </p>
-    </div>
-  </div>
+    <video controls playsinline preload="metadata">
+        <source src="assets/videos/1000124167.mp4" type="video/mp4">
+    </video>
 </div>
-  
+
+<h3>Physio Supriyo Rehab Team ❤️</h3>
+
+</section>
+<!-- ================= END Birthday VIDEO ================= -->
+    
 <!-- ================= FREE PHYSIOTHERAPY HEALTH CAMP ================= -->
   
   <section id="healthcamp" class="section">
